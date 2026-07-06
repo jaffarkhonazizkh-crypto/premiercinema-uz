@@ -173,3 +173,11 @@ function applyTranslations(root) {
 }
 
 document.documentElement.lang = getLang();
+
+// Translate any static data-i18n elements present in the initial HTML
+// (hero text, section headings, etc.) as soon as the DOM is parsed.
+// Header/footer are translated separately once layout.js injects them.
+document.addEventListener('DOMContentLoaded', () => applyTranslations());
+if (document.readyState === 'interactive' || document.readyState === 'complete') {
+  applyTranslations();
+}
