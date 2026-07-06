@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Premier Cinema — Bron qilish</title>
+<link rel="icon" href="/images/logo.png">
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<header class="site-header" id="site-header"></header>
+
+<div class="container">
+  <div style="padding:30px 0 0;">
+    <a href="#" id="back-link" class="btn btn-outline" data-i18n="back"></a>
+  </div>
+  <div class="booking-layout">
+    <div>
+      <div id="movie-context" style="display:flex;gap:16px;align-items:center;margin:24px 0 34px;">
+        <img id="ctx-poster" src="" alt="" style="width:60px;border-radius:8px;">
+        <div>
+          <h2 id="ctx-title" style="margin:0 0 4px;"></h2>
+          <p id="ctx-meta" style="margin:0;color:var(--muted);font-size:.9rem;"></p>
+        </div>
+      </div>
+      <h3 data-i18n="choose_seats" style="margin-bottom:20px;"></h3>
+      <div class="screen"></div>
+      <div class="screen-label">SCREEN</div>
+      <div class="seat-map" id="seat-map"></div>
+      <div class="legend">
+        <div class="item"><span class="dot available"></span><span data-i18n="seat_legend_available"></span></div>
+        <div class="item"><span class="dot selected"></span><span data-i18n="seat_legend_selected"></span></div>
+        <div class="item"><span class="dot booked"></span><span data-i18n="seat_legend_booked"></span></div>
+      </div>
+    </div>
+
+    <div class="summary-card">
+      <h3 data-i18n="booking_summary"></h3>
+      <p class="sub" id="summary-sub"></p>
+      <div id="error-box"></div>
+      <div class="summary-row"><span data-i18n="seats_count"></span><span id="sum-seats">—</span></div>
+      <div class="summary-row total"><span data-i18n="total_label"></span><span id="sum-total">0 so'm</span></div>
+
+      <div class="form-field">
+        <label data-i18n="field_name"></label>
+        <input type="text" id="input-name" placeholder="Ism Familiya">
+      </div>
+      <div class="form-field">
+        <label data-i18n="field_phone"></label>
+        <input type="tel" id="input-phone" placeholder="+998 90 123 45 67">
+      </div>
+
+      <div class="pay-methods" id="pay-methods">
+        <div class="pay-method" data-method="payme"><span class="logo">💳</span>Payme</div>
+        <div class="pay-method" data-method="click"><span class="logo">🖱️</span>Click</div>
+        <div class="pay-method" data-method="uzum"><span class="logo">🟣</span>Uzum</div>
+      </div>
+
+      <button class="btn btn-primary btn-block" id="pay-btn" data-i18n="pay_button"></button>
+      <p class="note" data-i18n="pay_demo_note"></p>
+    </div>
+  </div>
+</div>
+
+<footer id="site-footer"></footer>
+
+<script src="/js/i18n.js"></script>
+<script src="/js/layout.js"></script>
+<script src="/js/booking.js"></script>
+<script>
+  renderHeader('movies');
+  renderFooter();
+</script>
+</body>
+</html>

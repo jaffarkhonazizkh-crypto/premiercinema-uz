@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Premier Cinema — Film</title>
+<link rel="icon" href="/images/logo.png">
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<header class="site-header" id="site-header"></header>
+
+<div class="container">
+  <div class="movie-hero" id="movie-hero">
+    <div><img class="poster-lg" id="movie-poster" src="" alt=""></div>
+    <div>
+      <h1 id="movie-title"></h1>
+      <div class="tags" id="movie-tags"></div>
+      <p class="synopsis" id="movie-synopsis"></p>
+    </div>
+  </div>
+</div>
+
+<section class="showtimes">
+  <div class="container">
+    <div class="section-head"><h2 data-i18n="select_date"></h2></div>
+    <div class="date-picker" id="date-picker"></div>
+    <div id="sessions-container"></div>
+  </div>
+</section>
+
+<footer id="site-footer"></footer>
+
+<script src="/js/i18n.js"></script>
+<script src="/js/layout.js"></script>
+<script src="/js/movie.js"></script>
+<script>
+  renderHeader('movies');
+  renderFooter();
+</script>
+</body>
+</html>

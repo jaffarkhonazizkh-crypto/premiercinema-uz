@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Premier Cinema — Bron tasdiqlandi</title>
+<link rel="icon" href="/images/logo.png">
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<header class="site-header" id="site-header"></header>
+
+<div class="ticket-wrap">
+  <div class="success-check">✓</div>
+  <h2 style="text-align:center;" data-i18n="success_title"></h2>
+  <p style="text-align:center;color:var(--muted);" data-i18n="success_sub"></p>
+
+  <div class="ticket" style="margin-top:30px;">
+    <div class="ticket-top">
+      <img id="t-poster" src="" alt="">
+      <div>
+        <h2 id="t-title"></h2>
+        <p id="t-hall"></p>
+        <p id="t-datetime"></p>
+      </div>
+    </div>
+    <div class="ticket-divider"></div>
+    <div class="ticket-bottom">
+      <div>
+        <div style="font-size:.75rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;" data-i18n="ticket_code_label"></div>
+        <div class="ticket-code" id="t-code"></div>
+        <div style="margin-top:14px;font-size:.85rem;color:var(--muted);">
+          <span data-i18n="ticket_seats_label"></span>: <span id="t-seats"></span>
+        </div>
+        <div style="font-size:.85rem;color:var(--muted);">
+          <span data-i18n="ticket_total_label"></span>: <span id="t-total"></span>
+        </div>
+      </div>
+      <div class="qr-fake" title="Demo QR"></div>
+    </div>
+  </div>
+
+  <div style="text-align:center;margin-top:30px;">
+    <a href="/index.html" class="btn btn-primary" data-i18n="back_home"></a>
+  </div>
+</div>
+
+<footer id="site-footer"></footer>
+
+<script src="/js/i18n.js"></script>
+<script src="/js/layout.js"></script>
+<script src="/js/success.js"></script>
+<script>
+  renderHeader('');
+  renderFooter();
+</script>
+</body>
+</html>

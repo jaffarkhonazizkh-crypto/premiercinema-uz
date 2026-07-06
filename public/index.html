@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Premier Cinema — Tashkent City, Park in Mall</title>
+<meta name="description" content="Premier Cinema — Tashkent City Park in Mall, 4-qavat. Afisha, o'rindiq bron qilish, Payme/Click/Uzum orqali to'lov.">
+<link rel="icon" href="/images/logo.png">
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<header class="site-header" id="site-header"></header>
+
+<section class="hero">
+  <div class="hero-content">
+    <span class="eyebrow" data-i18n="hero_eyebrow"></span>
+    <h1 data-i18n="hero_title"></h1>
+    <p data-i18n="hero_desc"></p>
+    <div class="hero-actions">
+      <a href="#afisha" class="btn btn-primary" data-i18n="hero_cta_book"></a>
+      <a href="#zallar" class="btn btn-outline" data-i18n="hero_cta_halls"></a>
+    </div>
+    <div class="hero-meta">
+      <div><strong data-i18n="hero_stat_halls"></strong><span data-i18n="hero_stat_halls_sub"></span></div>
+      <div><strong data-i18n="hero_stat_seats"></strong><span data-i18n="hero_stat_seats_sub"></span></div>
+      <div><strong data-i18n="hero_stat_pay"></strong><span data-i18n="hero_stat_pay_sub"></span></div>
+    </div>
+  </div>
+</section>
+
+<section id="afisha">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <h2 data-i18n="now_showing"></h2>
+        <p data-i18n="now_showing_sub"></p>
+      </div>
+    </div>
+    <div class="movie-grid" id="movie-grid"></div>
+  </div>
+</section>
+
+<section id="zallar" style="background:var(--charcoal-2);">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <h2 data-i18n="halls_title"></h2>
+        <p data-i18n="halls_sub"></p>
+      </div>
+    </div>
+    <div class="hall-grid" id="hall-grid"></div>
+  </div>
+</section>
+
+<section id="manzil">
+  <div class="container">
+    <div class="section-head">
+      <div><h2 data-i18n="location_title"></h2></div>
+    </div>
+    <div class="location-wrap">
+      <div class="location-info">
+        <div class="item">
+          <div class="icon-chip">📍</div>
+          <div>
+            <h4 data-i18n="location_addr_title"></h4>
+            <p data-i18n="location_addr_body"></p>
+          </div>
+        </div>
+        <div class="item">
+          <div class="icon-chip">🕒</div>
+          <div>
+            <h4 data-i18n="location_hours_title"></h4>
+            <p data-i18n="location_hours_body"></p>
+          </div>
+        </div>
+        <div class="item">
+          <div class="icon-chip">📞</div>
+          <div>
+            <h4 data-i18n="location_phone_title"></h4>
+            <p><a href="tel:+998951467777">+998 95 146 77 77</a></p>
+          </div>
+        </div>
+        <div class="item">
+          <div class="icon-chip">💳</div>
+          <div>
+            <h4 data-i18n="location_pay_title"></h4>
+            <div class="pay-icons">
+              <span class="pay-chip">Payme</span>
+              <span class="pay-chip">Click</span>
+              <span class="pay-chip">Uzum Bank</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="map-frame">
+        <iframe src="https://www.google.com/maps?q=Tashkent+City+Park+in+Mall,+Botir+Zakirov+street,+Tashkent&output=embed" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer id="site-footer"></footer>
+
+<script src="/js/i18n.js"></script>
+<script src="/js/layout.js"></script>
+<script src="/js/main.js"></script>
+<script>
+  renderHeader('home');
+  renderFooter();
+</script>
+</body>
+</html>
