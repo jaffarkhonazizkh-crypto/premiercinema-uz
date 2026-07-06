@@ -1,0 +1,23 @@
+# Render.com uchun tayyor konfiguratsiya (Blueprint).
+# Render dashboardida "New +" -> "Blueprint" -> shu repo tanlansa, shu sozlamalar bilan ishga tushadi.
+#
+# DIQQAT: Free tarifda persistent disk ulanmaydi (Render buni faqat pullik
+# tariflarda qo'llab-quvvatlaydi). Shuning uchun quyida disk yo'q — demo/free
+# rejim uchun shunday qoldiring. Starter tarifga o'tsangiz, pastdagi
+# "disk:" blokini olib tashlab qo'ying (izohini oching) — shunda bron
+# ma'lumotlari qayta ishga tushirilganda ham saqlanib qoladi.
+services:
+  - type: web
+    name: premiercinema-uz
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_VERSION
+        value: 22.22.3
+    # Starter (yoki undan yuqori) tarifga o'tgach, quyidagi 4 qatorni oching:
+    # disk:
+    #   name: premiercinema-data
+    #   mountPath: /opt/render/project/src/data
+    #   sizeGB: 1

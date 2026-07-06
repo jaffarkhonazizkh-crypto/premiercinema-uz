@@ -1,0 +1,16 @@
+{
+  "name": "premiercinema-uz",
+  "version": "1.0.0",
+  "description": "Premier Cinema (Tashkent City, Park in Mall) - afisha, o'rindiq bron qilish va demo to'lov saytining namunasi",
+  "main": "server/index.js",
+  "engines": {
+    "node": ">=22.5.0"
+  },
+  "scripts": {
+    "start": "node server/index.js",
+    "seed": "node server/seed.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
