@@ -5,6 +5,32 @@ async function loadMovies() {
   const res = await fetch('/api/movies');
   MOVIES = await res.json();
   renderMovies();
+  initHeroCarousel();
+}
+
+let heroTimer = null;
+function initHeroCarousel() {
+  const track = document.getElementById('hero-carousel');
+  const dotsBox = document.getElementById('hero-dots');
+  if (!track || !dotsBox || MOVIES.length === 0) return;
+
+  const slides = MOVIES.slice(0, 6);
+  track.innerHTML = slides.map((m, i) =>
+    `<div class="slide${i === 0 ? ' active' : ''}" style="background-image:url('${m.poster}')"></div>`
+  ).join('');
+  dotsBox.innerHTML = slides.map((_, i) => `<span${i === 0 ? ' class="active"' : ''}></span>`).join('');
+
+  let current = 0;
+  if (heroTimer) clearInterval(heroTimer);
+  heroTimer = setInterval(() => {
+    const slideEls = track.querySelectorAll('.slide');
+    const dotEls = dotsBox.querySelectorAll('span');
+    slideEls[current].classList.remove('active');
+    dotEls[current].classList.remove('active');
+    current = (current + 1) % slideEls.length;
+    slideEls[current].classList.add('active');
+    dotEls[current].classList.add('active');
+  }, 4500);
 }
 
 function movieTitle(m) { return getLang() === 'ru' ? m.title_ru : m.title_uz; }
